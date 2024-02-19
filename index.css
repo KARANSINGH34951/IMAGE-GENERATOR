@@ -8,3 +8,34 @@
 body{
   line-height: 1.6;
 }
+
+.navbar{
+  padding: 1rem;
+  /* margin-bottom: -20px; */
+  position: relative;
+  z-index: 1;
+}
+
+.section-2{
+  height: 70vh;
+  padding: 3rem;
+  /* background-color: blue; */
+  background-image: url(pexels-yan-krukau-8199562\ \(1\).jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section-2 button{
+  background-color: hsl(120, 100%, 25%);
+  /* opacity: 0.5; */
+  font-weight: 900;
+  color: beige;
+}
+
+
+.category ul li{
+  margin: 1rem;
+  list-style: none;
+  list-style-type: none;
+  text-underline-offset: none;
+}
