@@ -23,6 +23,9 @@ body{
   background-image: url(pexels-yan-krukau-8199562\ \(1\).jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  flex-wrap: wrap;
+  z-index: 1;
+  /* position: relative; */
 }
 
 .section-2 button{
@@ -50,4 +53,40 @@ body{
   /* flex-wrap: wrap; */
 }
 
+@media screen and (max-width: 768px){
+  .section-3{
+    flex-direction: column;
+  }
+  
+  .section-2{
+    height: 50vh;
+  }
+}
 
+@media screen and (max-width: 800px){
+  .section-3{
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+  }
+  
+  .section-2{
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .section-2{
+    height: 40vh;
+  }
+  
+.section-3 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.2s ease-in-out;
+}
+}
+
+.section-3 img:hover{
+  opacity: 0.8;
+}
