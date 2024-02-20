@@ -39,3 +39,15 @@ body{
   list-style-type: none;
   text-underline-offset: none;
 }
+
+.section-3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0rem 2rem 0rem;
+  gap: 3rem;
+  padding: 1rem;
+  /* flex-wrap: wrap; */
+}
+
+
