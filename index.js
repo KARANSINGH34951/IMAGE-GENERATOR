@@ -2,6 +2,39 @@ let form = document.querySelector("form")
 let input = document.getElementsByClassName("search")
 let section3 =document.getElementsByClassName("section-3")
 
+let inputdata =""
+let page=0;
+
+async function search(){
+  inputdata=input.value;
+  const url=`https://api.unsplash.com/search/photos?pages=1&query=india flag&client_id=YPAfQlqnyZmZ45wsfbe5re_wKlF2LtsqA5apSKJWEYQ`
+
+  const response = await fetch(url);
+  const data = await response.json()
+
+  const results=data.results
+  console.log(results[0].urls.regular);
+
+  results.map((result)=>{
+    const imagewrapper =document.create('div')
+    imagewrapper.classList.add('search-result')
+    const image= document.createElement('img')
+    image.src= result.urls.small;
+    const imagelink = document.createElement('p')
+    imagelink.innerText= result.alt_description;
+    
+  })
+
+}
+
+
+
+search()
+
+
+
+
+
 let img1= document.getElementById("img1")  
 let cardtext1 = document.getElementsByClassName("card-text1")
 let img2= document.getElementById("img2")  
@@ -33,7 +66,6 @@ let cardtext42 = document.getElementsByClassName("card-text42")
 
 
 
-// let ramdom =`https://api.unsplash.com/photos/random/?client_id=YPAfQlqnyZmZ45wsfbe5re_wKlF2LtsqA5apSKJWEYQ`
 
 // let url=`https://api.unsplash.com/search/photos?pages=1&query=inida&client_id=YPAfQlqnyZmZ45wsfbe5re_wKlF2LtsqA5apSKJWEYQ`
 
@@ -47,8 +79,6 @@ let cardtext42 = document.getElementsByClassName("card-text42")
 //   console.log(data.results[0].urls.regular);
 // })
 
-// function myfunction(){
-//   let src1; // Declare the src variable outside of the .then block
   
 function func1(img1,cardtext1,img2,cardtext2,img3,cardtext3,img4,cardtext4) {
 
@@ -111,14 +141,6 @@ function func1(img1,cardtext1,img2,cardtext2,img3,cardtext3,img4,cardtext4) {
 func1(img1,cardtext1,img2,cardtext2,img3,cardtext3,img4,cardtext4)
 func1(img11,cardtext11,img21,cardtext21,img31,cardtext31,img41,cardtext41)
 func1(img12,cardtext12,img22,cardtext22,img32,cardtext32,img42,cardtext42)
-
-
-
-
-
-
-
-
 
 
 
