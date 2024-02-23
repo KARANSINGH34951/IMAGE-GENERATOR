@@ -19,7 +19,7 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary overflow-hidden">
     <div class="container-fluid">
-      <a class="navbar-brand fs-1" href="#"><i class="fa-solid fa-icons"></i>  FREE IMAGE DOWNLOADER</a>
+      <a class="navbar-brand" href="#"><i class="fa-solid fa-icons"></i>  FREE IMAGE DOWNLOADER</a>
       
       
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,10 +45,10 @@
         
           <a class="nav-link active mx-4" aria-current="page" href="#">Home</a>
         
-        <form class="d-flex" role="search">
-          <input class="form-control me-2 search" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        <div class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success">Search</button>
+        </div>
       </div>
     </div>
   </nav>
@@ -57,23 +57,27 @@
 
   <div class="section-2 container-fluid img-fluid img-thumbnail">
     <div class="row bg-body-primary" >
-      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"> -->
         <div class="container text-center">
           <h1 class="display-1 fw-bolder">Welcome to my website</h1>
-          <p class="lead fw-bold">Are you ready to transform your ideas into visually captivating images? Welcome to IMAGE DOWNLOADER, where imagination meets innovation! Our powerful image generator tool empowers you to create eye-catching visuals effortlessly..</p>
-          <hr class="my-3">
-
-          <form class="d-flex justify-content-sm-center" role="search" action="">
-            <input class="form-control me-2 search" type="search" placeholder="Search for more photos" aria-label="Search" style="width: 19rem;min-height: 3rem;">
-            <button class="btn btn-outline-success bg-body-success" type="submit">Search</button>
-          </form>
+          <p class="lead fw-bold">Are you ready to transform your ideas into visually captivating images? Welcome to IMAGE DOWNLOADER, where imagination meets innovation!</p>
           
-          <p class="mfst-normal-4 text-info-emphasis fs-3 fw-semibold">It uses utility classes for typography and spacing to space content out within the larger container.</p>
+
+          <!-- <form class="d-flex justify-content-sm-center" role="search" action=""> -->
+
+          <div class="d-flex justify-content-sm-center">
+            <input class="form-control me-2 search1" type="search" placeholder="Search for more photos" aria-label="Search" style="width: 19rem;min-height: 3rem;">
+            <button class="btn btn-outline-success bg-body-success" id="btn1" type="submit">Search</button>
+          </div>
+        
+          
+          <p class="mfst-normal-4 para fs-3 fw-semibold">It uses utility classes for typography and spacing to space content out within the larger container.</p>
           
           <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
           
+          <hr class="my-3">
         </div>
-      </div>
+      <!-- </div> -->
     </div>
   </div>
 
@@ -239,6 +243,25 @@
               <h1>made by karan singh </h1>
           </div>
       </div>
+
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
   </div>
 </footer>
 
@@ -247,7 +270,8 @@
 <script>
   AOS.init();
 </script>
-<script src="index.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 </body>
+<script src="index.js"></script>
 </html>

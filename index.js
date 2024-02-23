@@ -1,39 +1,4 @@
-let form = document.querySelector("form")
-let input = document.getElementsByClassName("search")
-let section3 =document.getElementsByClassName("section-3")
-
-let inputdata =""
-let page=0;
-
-async function search(){
-  inputdata=input.value;
-  const url=`https://api.unsplash.com/search/photos?pages=1&query=india flag&client_id=YPAfQlqnyZmZ45wsfbe5re_wKlF2LtsqA5apSKJWEYQ`
-
-  const response = await fetch(url);
-  const data = await response.json()
-
-  const results=data.results
-  console.log(results[0].urls.regular);
-
-  results.map((result)=>{
-    const imagewrapper =document.create('div')
-    imagewrapper.classList.add('search-result')
-    const image= document.createElement('img')
-    image.src= result.urls.small;
-    const imagelink = document.createElement('p')
-    imagelink.innerText= result.alt_description;
-    
-  })
-
-}
-
-
-
-search()
-
-
-
-
+let section3 = document.getElementsByClassName("section-3");
 
 let img1= document.getElementById("img1")  
 let cardtext1 = document.getElementsByClassName("card-text1")
@@ -64,10 +29,63 @@ let cardtext32 = document.getElementsByClassName("card-text32")
 let img42= document.getElementById("img42")  
 let cardtext42 = document.getElementsByClassName("card-text42")
 
+let inputdata = "";
+let page = 1;
+
+let store = function(){
+  return Math.floor(Math.random() * 10);
+}
+
+
+async function search() {
+  let input1 = document.getElementsByClassName("search1")[0]// Declare and assign the input1 variable
+  inputdata = input1.value;
+  console.log(inputdata);
+  const url = `https://api.unsplash.com/search/photos?pages=1&query=${inputdata}&client_id=YPAfQlqnyZmZ45wsfbe5re_wKlF2LtsqA5apSKJWEYQ`;
+
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log(data);
+  const results=data.results
+  
+  console.log(results[store()].urls.regular);
+
+  img1.src = results[store()].urls.regular;
+  img2.src = results[store()].urls.regular;
+  img3.src = results[store()].urls.regular;
+  img4.src = results[store()].urls.regular;
+  img11.src = results[store()].urls.regular;
+  img21.src = results[store()].urls.regular;
+  img31.src = results[store()].urls.regular;
+  img41.src = results[store()].urls.regular;
+  img12.src = results[store()].urls.regular;
+  img22.src = results[store()].urls.regular;
+  img32.src = results[store()].urls.regular;
+  img42.src = results[store()].urls.regular;
+
+
+  if(page===1){
+    input1.innerHTML=""
+  }
+
+  page++
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM content loaded");
+  const btn = document.getElementById("btn1")
+
+  btn.addEventListener("click", (event) => {
+    event.preventDefault();
+    alert("Form submitted!");
+    page = 1;
+    search();
+  });
+});
 
 
 
-// let url=`https://api.unsplash.com/search/photos?pages=1&query=inida&client_id=YPAfQlqnyZmZ45wsfbe5re_wKlF2LtsqA5apSKJWEYQ`
 
 // fetch(`https://api.unsplash.com/search/photos?pages=1&query=india flag&client_id=YPAfQlqnyZmZ45wsfbe5re_wKlF2LtsqA5apSKJWEYQ`)
 // .then((res=>{
@@ -82,7 +100,6 @@ let cardtext42 = document.getElementsByClassName("card-text42")
   
 function func1(img1,cardtext1,img2,cardtext2,img3,cardtext3,img4,cardtext4) {
 
-  
   fetch(`https://api.unsplash.com/photos/random/?client_id=YPAfQlqnyZmZ45wsfbe5re_wKlF2LtsqA5apSKJWEYQ`)
 .then((res=>{
   return res.json()
@@ -141,8 +158,6 @@ function func1(img1,cardtext1,img2,cardtext2,img3,cardtext3,img4,cardtext4) {
 func1(img1,cardtext1,img2,cardtext2,img3,cardtext3,img4,cardtext4)
 func1(img11,cardtext11,img21,cardtext21,img31,cardtext31,img41,cardtext41)
 func1(img12,cardtext12,img22,cardtext22,img32,cardtext32,img42,cardtext42)
-
-
 
 
 
