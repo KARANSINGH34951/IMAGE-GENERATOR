@@ -41,6 +41,13 @@
 //   let input1 = document.getElementsByClassName("search1")[0]// Declare and assign the input1 variable
 //   inputdata = input1.value;
 //   console.log(inputdata);
+//   if(inputdata===""){
+//     alert("Please enter a search term")
+//   }
+//   else if(page!=1){
+//     const url = `https://api.unsplash.com/search/photos?pages=${page}&query=${inputdata}&client_id=YPAfQlqnyZmZ45wsfbe5re_wKlF2LtsqA5apSKJWEYQ`;
+//   }
+
 //   const url = `https://api.unsplash.com/search/photos?pages=${page}&query=${inputdata}&client_id=YPAfQlqnyZmZ45wsfbe5re_wKlF2LtsqA5apSKJWEYQ`;
 
 //   const response = await fetch(url);
