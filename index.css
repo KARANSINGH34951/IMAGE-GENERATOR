@@ -23,3 +23,9 @@
 .footer{
   background-color: black;
 }
+
+@media  (max-width: 1400px){
+  .displays{
+    display: none;
+  }
+}
