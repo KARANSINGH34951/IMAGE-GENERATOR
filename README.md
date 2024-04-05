@@ -11,17 +11,9 @@ Welcome to Image Generator, your go-to destination for downloading free high-qua
 - **User-Friendly Interface**: Intuitive design for seamless navigation and user experience.
 - **Responsive Design**: Optimized for both desktop and mobile devices.
 
-## Technologies Used
-
-- **Frontend**: HTML, CSS, JavaScript, React.js
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
-- **API**: Custom API for fetching image data
-- **Deployment**: Heroku
-
 ## Usage
 
-1. Visit the website [here](#) to explore the image collection.
+1. Visit the website [here](https://karansingh34951.github.io/IMAGE-GENERATOR/) to explore the image collection.
 2. Use the search bar or browse through categories to find the desired images.
 3. Click on an image to view its details and download options.
 4. Select the preferred resolution and format, then click on the download button to save the image.
