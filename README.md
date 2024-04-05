@@ -34,7 +34,7 @@ To run the project locally, follow these steps:
 2. Navigate to the project directory: `cd image-generator`
 3. Install dependencies: `npm install`
 4. Start the server: `npm start`
-5. Visit `http://localhost:3000` in your web browser to access the application.
+5. Visit `http://localhost:3000](https://karansingh34951.github.io/IMAGE-GENERATOR/` in your web browser to access the application.
 
 ## Contributing
 
